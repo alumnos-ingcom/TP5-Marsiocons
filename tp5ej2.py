@@ -3,9 +3,11 @@
 # UNRN Andina - Introducción a la Ingenieria en Computación
 ################
 
-from utilidades import ingreso_entero
+import utilidades as ing
 
 def fibonacci(numero_vez):
+    if (numero_vez < 3):
+        raise ing.IngresoIncorrecto("Error. El número tiene que ser mayor a 2!")
     anterior = 1
     anterior_anterior = 1
     for i in range(numero_vez):
@@ -15,7 +17,7 @@ def fibonacci(numero_vez):
     return resultado
 
 def prueba():
-    num = ingreso_entero("Ingrese la n-nesima vez de fibonnaci: ")
+    num = ing.ingreso_entero("Ingrese la n-nesima vez de fibonnaci: ")
     print(fibonacci(num))
     pass
 
