@@ -21,6 +21,7 @@ def encriptar_cesar(texto, rotacion):
     num9 = 57
     
     lista_nuevo_texto = []
+    rotacion_num = rotacion
     
     for i in texto:
         dato_unicode =  ord(i)
@@ -37,11 +38,11 @@ def encriptar_cesar(texto, rotacion):
                 lista_nuevo_texto.append(chr(dato_unicode+rotacion))
             ## numeros 0 - 9
             elif(num0 <= dato_unicode <= num9):
-                while rotacion > 9:
-                    rotacion = rotacion - 9
-                if (dato_unicode + rotacion > num9):
+                while rotacion_num > 9:
+                    rotacion_num = rotacion_num - 9
+                if (dato_unicode + rotacion_num > num9):
                     dato_unicode = dato_unicode - 10
-                lista_nuevo_texto.append(chr(dato_unicode+rotacion))
+                lista_nuevo_texto.append(chr(dato_unicode+rotacion_num))
             else:
                 lista_nuevo_texto.append(str(i))
         else:
@@ -53,7 +54,7 @@ def encriptar_cesar(texto, rotacion):
 #def desencriptar_cesar(texto, rotacion):
 
 def prueba():
-    encriptar_cesar("13ASD!!!...asd31", 15)
+    encriptar_cesar("1 A", 15)
     pass
 
 if __name__ == "__main__":
