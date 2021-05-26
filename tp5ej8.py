@@ -19,6 +19,8 @@ def encriptar_cesar(texto, rotacion):
                 nuevo_dato = dato_unicode + rotacion - 75
                 if (58 <= nuevo_dato <= 64):
                     lista_nuevo_texto.append(chr(nuevo_dato + 7))
+                elif (91 <= nuevo_dato <= 96):
+                    lista_nuevo_texto.append(chr(nuevo_dato + 6))
                 else:
                     lista_nuevo_texto.append(chr(nuevo_dato))
             else:
@@ -29,10 +31,11 @@ def encriptar_cesar(texto, rotacion):
     print(nuevo_texto)
     
 #def desencriptar_cesar(texto, rotacion):
-
 def prueba():
-    for i in range(25):
-        encriptar_cesar("0123456789 ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz", i+1)
+    for i in range(5):
+        print(i)
+        encriptar_cesar("0123456789 ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz", 44)
+    #encriptar_cesar("z", 44)
     pass
 
 if __name__ == "__main__":
