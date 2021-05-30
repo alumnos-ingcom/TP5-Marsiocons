@@ -4,6 +4,7 @@
 ################
 
 from utilidades import es_numero, es_letra_mayus, es_letra_minus
+from tp5ej7 import obtener_distancia
     
 def encriptar_cesar(texto, rotacion):
     lista_nuevo_texto = []
@@ -29,6 +30,27 @@ def encriptar_cesar(texto, rotacion):
             if (es_letra_mayus(dato_unicode) and
                 es_letra_minus(dato_encript)):
                 dato_encript = dato_encript + 6
+                
+            if (es_numero(dato_unicode) and
+                es_letra_minus(dato_encript)):
+                dato_encript = dato_encript + 13
+            
+            if (es_letra_mayus(dato_unicode) and
+                dato_encript > carac_minus_z):
+                dato_encript = dato_encript + 6
+                distancia = obtener_distancia(dato_encript, carac_minus_z)
+                if (distancia > 10):
+                    distancia = distancia + 7
+                dato_encript = carac_cero + distancia - 1
+            
+            if (es_letra_minus(dato_unicode) and
+                dato_encript > carac_minus_z):
+                distancia = obtener_distancia(dato_encript, carac_minus_z)
+                if (distancia > 26):
+                    distancia = distancia + 6
+                if (distancia > 10):
+                    distancia = distancia + 7
+                dato_encript = carac_cero + distancia -1
             
             if (dato_encript > carac_minus_z):
                 dato_encript = dato_encript - 75
@@ -41,18 +63,15 @@ def encriptar_cesar(texto, rotacion):
                 es_letra_mayus(dato_encript)):
                 dato_encript = dato_encript + 7
                 
-            if (es_numero(dato_unicode) and
-                es_letra_minus(dato_encript)):
-                dato_encript = dato_encript + 13
                 
             if (es_letra_mayus(dato_unicode) and
                 es_letra_mayus(dato_encript) and
-                rotacion > 25):
+                rotacion > 25 and rotacion < 51):
                 dato_encript = dato_encript + 13
             
             if (es_letra_minus(dato_unicode) and
                 es_letra_minus(dato_encript) and
-                rotacion > 25):
+                rotacion > 25 and rotacion < 51):
                 dato_encript = dato_encript + 13
 
             
@@ -84,7 +103,7 @@ def prueba():
 #     for i in range(50):
 #         encr = encriptar_cesar("0123456789 ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz", i+1)
 #         print(f"{i+1} >: {encr}")
-    print(encriptar_cesar("z", 50))
+    print(encriptar_cesar("z", 62))
     pass
 
 if __name__ == "__main__":
