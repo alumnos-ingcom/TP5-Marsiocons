@@ -7,14 +7,18 @@ from utilidades import es_numero, es_letra_mayus, es_letra_minus
 from tp5ej7 import obtener_distancia
     
 def encriptar_cesar(texto, rotacion):
+    
+    if (rotacion > 62):
+        rotacion = rotacion - 62
+    
     lista_nuevo_texto = []
     
-    carac_mayus_a = 65
-    carac_mayus_z = 90
-    carac_minus_a = 97
-    carac_minus_z = 122
-    carac_cero = 48
-    carac_nueve = 57
+    carac_mayus_a = ord("A")
+    carac_mayus_z = ord("Z")
+    carac_minus_a = ord("a")
+    carac_minus_z = ord("z")
+    carac_cero = ord("0")
+    carac_nueve = ord("9")
     
     
     
