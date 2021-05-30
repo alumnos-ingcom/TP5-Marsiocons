@@ -88,3 +88,19 @@ def crear_lista(opcion):
         numero_nuevo = ingreso_entero("Ingrese un número para agregar a la lista:")
         lista.append(numero_nuevo)
     return lista
+
+def es_numero(dato):
+    if (dato > 47 and dato < 58):
+        return True
+    else:
+        return False
+def es_letra_mayus(dato):
+    if (dato > 64 and dato < 91):
+        return True
+    else:
+        return False
+def es_letra_minus(dato):
+    if (dato > 96 and dato < 123):
+        return True
+    else:
+        return False
