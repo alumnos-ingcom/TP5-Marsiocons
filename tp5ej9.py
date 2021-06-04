@@ -3,6 +3,9 @@
 # UNRN Andina - Introducción a la Ingenieria en Computación
 ################
 
+from time import time
+
+
 def factoriales(entrada):
     
     numero_lista = str(entrada)
@@ -36,12 +39,15 @@ def factoriones():
             
         if (resultado == i):
             lista_factoriones.append(i)
-    print(lista_factoriones)
+    return lista_factoriones
 
 def prueba():
+    tiempo = time()
     #print(factoriales(5))
     #print(factoriales(40585))
-    factoriones()
+    print(factoriones())
+    tiempo = round(time()-tiempo)
+    print(f"terminado en: {tiempo}")
     pass
 
 if __name__ == "__main__":
