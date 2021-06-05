@@ -3,6 +3,8 @@
 # UNRN Andina - Introducción a la Ingenieria en Computación
 ################
 
+from time import time
+
 class IngresoIncorrecto(Exception):
     """Esta es la Excepcion para el ingreso incorrecto"""
     pass
@@ -104,3 +106,11 @@ def es_letra_minus(dato):
         return True
     else:
         return False
+
+def set_tiempo():
+    return time()
+
+def get_tiempo(tiempo_inicial):
+    tiempo = round(time() - tiempo_inicial)
+    print(f"Programa terminado en: {tiempo}")
+    

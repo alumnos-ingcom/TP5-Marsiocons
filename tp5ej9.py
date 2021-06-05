@@ -3,7 +3,7 @@
 # UNRN Andina - Introducción a la Ingenieria en Computación
 ################
 
-from time import time
+from utilidades import get_tiempo, set_tiempo
 
 
 def factoriales(entrada):
@@ -42,12 +42,11 @@ def factoriones():
     return lista_factoriones
 
 def prueba():
-    tiempo = time()
+    tiempo = set_tiempo()
     #print(factoriales(5))
     #print(factoriales(40585))
     print(factoriones())
-    tiempo = round(time()-tiempo)
-    print(f"terminado en: {tiempo}")
+    tiempo = get_tiempo(tiempo)
     pass
 
 if __name__ == "__main__":
