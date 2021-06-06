@@ -28,13 +28,39 @@ def convertir_a_binario(numero):
     
     pass
 
-def convertir_a_numero(texto):
+def convertir_a_numero(binario):
+    
+    i = 0
+    
+    if binario == i:
+        return 0
+    
+    
+    while True:
+        
+        binario_reves = ""
+        numero = i
+        while (numero != 0):
+            
+            resto_uno_cero = numero % 2
+            binario_reves = binario_reves + str(resto_uno_cero)
+            numero = numero // 2
+            
+        resultado = binario_reves[::-1]
+        
+        if (resultado == binario):
+            return i
+        
+        i = i + 1
     
     pass
 
 def prueba():
     
-    print(convertir_a_binario(100))
+    binario = convertir_a_binario(12)
+    print(f"binario = {binario}")
+    numero = convertir_a_numero(binario)
+    print(f"numero = {numero}")
     
     pass
 
