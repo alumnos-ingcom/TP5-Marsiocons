@@ -4,6 +4,7 @@
 ################
 
 from time import time
+form random import randint
 
 class IngresoIncorrecto(Exception):
     """Esta es la Excepcion para el ingreso incorrecto"""
@@ -114,3 +115,11 @@ def get_tiempo(tiempo_inicial):
     tiempo = round(time() - tiempo_inicial)
     print(f"Programa terminado en: {tiempo}")
     
+def lista_aleatoria(cant_numeros = 10,
+                    numero_minimo = 1,
+                    numero_maximo = 45):
+    lista = list()
+    for i in range(cant_numeros):
+        num = random.randint(numero_minimo, numero_maximo)
+        lista.append(num)
+    return lista
