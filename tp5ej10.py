@@ -54,6 +54,7 @@ def convertir_a_numero(binario):
     pass
 
 def prueba():
+    
     msg = "Ingrese un número mayor a 0"
     print("*" * len(msg))
     print()
@@ -64,6 +65,8 @@ def prueba():
     
     if (numero <=0):
         raise IngresoIncorrecto("El número tiene que ser mayor a 0!")
+    
+    tiempo = set_tiempo()
     
     print("")
     binario = convertir_a_binario(numero)
@@ -76,6 +79,8 @@ def prueba():
     
     print(f"( {binario} ) \nExpresado en números naturales es:")
     print(numero)
+    
+    get_tiempo(tiempo)
     
     pass
 
