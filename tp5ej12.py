@@ -3,33 +3,44 @@
 # UNRN Andina - Introducción a la Ingenieria en Computación
 ################
 
-from utilidades import lista_aleatoria
+from utilidades import lista_aleatoria, remover_repetidos, ordenar_menor_mayor
+
+def copiar_lista(lista):
+    nueva_lista = list()
+    for i in lista:
+        nueva_lista.append(i)
+    return nueva_lista
 
 def comparar_listas(lista_uno, lista_dos):
     
-    nueva_lista = list()
+    if (len(lista_uno) != len(lista_dos)):
+        return False
     
-    for i in lista_uno:
-        for j in lista_dos:
-            if (j == i):
-                nueva_lista.append(i)
-                nueva_lista.append(j)
+    lista_ordenada_uno = ordenar_menor_mayor(lista_uno)
     
-    cant_nueva_lista = len(nueva_lista)
-    cant_lista_uno_dos = len(lista_uno) + len(lista_dos)
+    lista_1_no_rep, lista_1_rep = remover_repetidos(lista_ordenada_uno)
     
-    if (cant_nueva_lista == cant_lista_uno_dos):
+    lista_ordenada_dos = ordenar_menor_mayor(lista_dos)
+    
+    lista_2_no_rep, lista_2_rep = remover_repetidos(lista_ordenada_dos)
+    
+    if (lista_1_no_rep == lista_2_no_rep and
+        lista_1_rep == lista_2_rep):
         return True
     else:
         return False
+
     pass
 
 def prueba():
     
-    lista_uno = [10,20,33,43,12,2,2,2]
-    lista_dos = [10,20,33,43,12,1,2,1]
+    lista_uno = [1,20,1,2,1,1]
+    lista_dos = [1,2,1,20,2,1]
     
-    print(comparar_listas(lista_uno, lista_dos))
+    if (comparar_listas(lista_uno, lista_dos)):
+        print("Las listas son idénticas!")
+    else:
+        print("Las listas son diferentes!")
     
     pass
 

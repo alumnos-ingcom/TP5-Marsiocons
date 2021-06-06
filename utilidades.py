@@ -123,3 +123,26 @@ def lista_aleatoria(cant_numeros = 10,
         num = randint(numero_minimo, numero_maximo)
         lista.append(num)
     return lista
+
+def ordenar_menor_mayor(lista_numeros):
+    nueva_lista = list()
+    for i in range(len(lista_numeros)):
+        minimo = min(lista_numeros)
+        nueva_lista.append(minimo)
+        lista_numeros.remove(minimo)
+    
+    return nueva_lista
+
+def remover_repetidos(lista):
+    lista_no_rep = lista
+    lista_rep = list()
+    for i in range(len(lista)):
+        if (i + 1 >= len(lista)):
+            break
+        if (lista[i] == lista[i+1]):
+            lista_no_rep.remove(lista[i])
+            lista_rep.append(lista[i])
+            
+    return lista_no_rep, lista_rep
+    
+    
