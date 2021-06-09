@@ -19,7 +19,6 @@ def fibonacci(numero_vez):
 def prueba():
     num = ing.ingreso_entero("Ingrese la n-nesima vez de fibonnaci: ")
     print(fibonacci(num))
-    pass
 
 if __name__ == "__main__":
     prueba()

@@ -16,7 +16,6 @@ def prueba():
         print("Es par!")
     else:
         print("Es impar!")
-    pass
 
 if __name__ == "__main__":
     prueba()

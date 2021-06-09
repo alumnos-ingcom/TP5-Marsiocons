@@ -42,7 +42,6 @@ def prueba():
     else:
         print("Las listas son diferentes!")
     
-    pass
 
 if __name__ == "__main__":
     prueba()

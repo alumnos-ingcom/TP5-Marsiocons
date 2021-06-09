@@ -23,7 +23,6 @@ def tribonacci(numero_vez):
 def prueba():
     num = ing.ingreso_entero("Ingrese la n-esima vez de tribonacci: ")
     print(tribonacci(num))
-    pass
 
 if __name__ == "__main__":
     prueba()

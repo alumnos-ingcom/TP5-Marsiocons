@@ -81,8 +81,7 @@ def prueba():
     print(numero)
     
     get_tiempo(tiempo)
-    
-    pass
+
 
 if __name__ == "__main__":
     prueba()

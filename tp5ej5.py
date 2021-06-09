@@ -17,7 +17,6 @@ def prueba():
     print("Ingrese el texto para invertir las mayúsculas y minúsculas:")
     texto = str(input())
     print(inversion_may_min(texto))
-    pass
 
 if __name__ == "__main__":
     prueba()

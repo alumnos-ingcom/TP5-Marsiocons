@@ -43,7 +43,6 @@ def parentesis_balanceados(parentesis):
 
 def prueba():
     print(parentesis_balanceados("[[]]"))
-    pass
 
 if __name__ == "__main__":
     prueba()

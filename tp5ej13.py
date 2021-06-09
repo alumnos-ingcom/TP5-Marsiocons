@@ -47,7 +47,6 @@ def prueba():
     except PalabraInexistente:
         print(f"ERROR: '{palabra}' no se encuentra dentro del texto!")
         
-    pass
 
 if __name__ == "__main__":
     prueba()

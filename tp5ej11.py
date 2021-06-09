@@ -33,7 +33,6 @@ def prueba():
     
     print(promedio_movil(lista, 3))
     
-    pass
 
 if __name__ == "__main__":
     prueba()

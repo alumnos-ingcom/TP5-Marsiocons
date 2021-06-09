@@ -47,7 +47,6 @@ def prueba():
     #print(factoriales(40585))
     print(factoriones())
     tiempo = get_tiempo(tiempo)
-    pass
 
 if __name__ == "__main__":
     prueba()

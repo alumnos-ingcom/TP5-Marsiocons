@@ -109,7 +109,6 @@ def prueba():
     desencriptado = desencriptar_cesar(encriptado, rotacion)
     print("Los datos desencriptados son: ")
     print(desencriptado)
-    pass
 
 if __name__ == "__main__":
     prueba()

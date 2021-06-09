@@ -28,7 +28,6 @@ def prueba():
         else:
             print(f"El número ( {numero} ) no es capícua!")
     
-    pass
 
 if __name__ == "__main__":
     prueba()

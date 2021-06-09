@@ -196,7 +196,6 @@ def prueba():
     print("Los datos desencriptados son: ")
     print(f" >  {descesar}")
     
-    pass
 
 if __name__ == "__main__":
     prueba()

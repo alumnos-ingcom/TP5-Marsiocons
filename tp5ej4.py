@@ -28,7 +28,6 @@ def prueba():
         print("El número es perfecto!")
     else:
         print("El número no es perfecto")
-    pass
 
 if __name__ == "__main__":
     prueba()

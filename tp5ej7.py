@@ -26,7 +26,6 @@ def prueba():
     num2 = ingreso_entero("Segundo número: ")
     distancia = obtener_distancia(num1, num2)
     print(f"La distancia entre {num1} y {num2} es {distancia}.")
-    pass
 
 if __name__ == "__main__":
     prueba()
